@@ -2,7 +2,7 @@
 
 datapath="data"
 
-# New cars to csv
+# Extract new cars html to csv
 csvfile="$datapath/new_cars.csv"
 for file in $datapath/new_pages/*
 do
@@ -13,6 +13,5 @@ do
 done
 
 # Generate diffs
-
 diff --new-line-format="" --unchanged-line-format="" "$datapath/new_cars.csv" "$datapath/old_cars.csv" > new_cars_only.csv
 diff --new-line-format="" --unchanged-line-format="" "$datapath/old_cars.csv" "$datapath/new_cars.csv" > old_cars_only.csv

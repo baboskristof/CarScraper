@@ -9,5 +9,4 @@ $scriptpath/csv_generator.sh
 if [ -s "new_cars_only.csv" ]; then
   echo "Új autó került fel a keresett kategóriában:"
   awk -F "|" '{printf "%s (Link: %s)\n", $1, $2}' new_cars_only.csv
-
 fi
